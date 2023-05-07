@@ -77,4 +77,12 @@ Setting up the SDK and getting the compiled program onto the Pico are
 beyond anything this README could hope to cover, but the Raspberry Pi
 people have that part well covered.
 
+To send a converted binary image to the device, you can do something
+like this on a Linux machine connected via UART:
+
+```
+stty -F /dev/serial0 9600
+cat foo.bin > /dev/serial0
+```
+
 Good luck!
